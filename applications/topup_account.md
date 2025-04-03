@@ -13,8 +13,8 @@ This proposal aims to enhance the Cere Developer Console by enabling users to to
 > Please note that the data provided in this section is for administrative and informational purposes only.
 
 ### Team Members
-- **Team Leader:** [Name of team leader]
-- **Team Members:** [Names of team members]
+- **Team Leader:** Jarvis
+- **Team Members:** Ultron
 
 ### Contact
 - **Contact Name:** Jarvis
