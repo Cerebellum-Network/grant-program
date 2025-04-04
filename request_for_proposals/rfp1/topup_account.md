@@ -96,8 +96,8 @@ We believe this project will significantly lower barriers to entry for new users
 
 The proposed solution aims to simplify and enhance the DDC account top-up process by allowing users to directly top up their accounts using fiat currencies (e.g., USD or EUR) or cryptocurrencies (e.g., USDT or USDC) on EVM-based networks. This approach removes the dependency on manual token acquisition and streamlines onboarding for users unfamiliar with blockchain systems.
 #### Sequence Diagrams
-![../../images/image1.png](./images/image5.png)
-![../../images/image1.png](./images/image6.png)
+![../../images/image1.png](../../applications/images/image5.png)
+![../../images/image1.png](../../applications/images/image6.png)
 
 #### **Key Features** ✨
 
