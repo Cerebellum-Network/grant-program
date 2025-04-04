@@ -2,11 +2,11 @@
 ## Proposal submitted to Cere Foundation on DATE by WHO
 
 ## Project Slug
-If your application is using an existing idea provided by Cere, please add the link here:
-[Link to the Cere-provided idea]
+If your application is using an existing RFP provided by Cere, please add the link here:
+[Link to the Cere-provided RFP]
 
-If you are proposing a new idea that leverages the Cere stack, create a new file in the ideas folder with a brief description of your idea, and then add the link to it here:
-`ideas/`[your-idea-name].md
+If you are proposing a new RFP that leverages the Cere stack, create a new file in the RFPs folder with a brief description of your proposal, and then add the link to it here:
+`request_for_proposals/`[your-proposal-name].md
 
 ## Abstract
 [< 250 words] with [references] linked in REFERENCES below.

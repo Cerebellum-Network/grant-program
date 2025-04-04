@@ -50,8 +50,8 @@ You can find general documentation and more information on Cere Network and the 
 
 ## Application Process
 
-### Choose Idea OR Come with your proposals
-Click  [here](ideas%2Fopen_ideas.md) for open proposals.
+### Choose RFP  OR Come with your RFP
+Click  [here](request_for_proposals/rfp1/README.md) for open proposals.
 
 ### Application Submission
 1. Fork [this repository](https://github.com/Cerebellum-Network/grant-program) (branch: `master`)  or `git pull` to update your existing repo.
@@ -60,12 +60,13 @@ Click  [here](ideas%2Fopen_ideas.md) for open proposals.
 4. Name the new file after your project: `project_name.md`.
 5. Fill out the template with the details of your project.
    💡 That file should contain ALL necessary information for complete evaluation of the proposed grant! And the more information, the faster the review.
-6. Review the `Terms and Conditions` file inside the Documents folder.
-7. Once you're done, create a pull request.
+6. Put the file in corresponding RFP folder
+7. Review the `Terms and Conditions` file inside the Documents folder.
+8. Once you're done, create a pull request.
 
    ⚠️ By initiating a pull request, you are indicating you have ready and accepted the terms and conditions as provided.
 
-8. At this stage, the pull request should only contain *one new file* — the markdown file you created from the template.
+9. At this stage, the pull request should only contain *one new file* — the markdown file you created from the template.
 
 ### Application Review
 1. The Cere Foundation Grants Committee will issue comments and request changes on the pull request.
@@ -75,8 +76,13 @@ Click  [here](ideas%2Fopen_ideas.md) for open proposals.
    Unless specified otherwise, the day on which it is accepted will be considered the starting date of the project, and will be used to estimate delivery dates.
 
 ### Onboarding
-We will review the application and provide the further instruction.
+We will review the application and will provide you with feedback as soon as possible.
 
+If your application is approved, please proceed as follows:
+1.	Quick Start Guide: Refer to the quick start guide provided in the corresponding RFP README for detailed instructions. For example, you can review the guide here: [Developer Console Topup Guide](https://github.com/Cerebellum-Network/cluster-apps/blob/dev/apps/developer-console/developer_console_topup.md#quick-start-guide-).
+2.	Repository Setup: Clone the corresponding repository to your local environment.
+3.	Development: Begin implementing the required changes as outlined in the documentation.
+4.	Pull Request: Once your changes are complete, submit a pull request. The repository maintainer will review your PR and provide further feedback if necessary.
 
 ### Changes to a Grant after Approval
 Accepted grant applications can be amended at any time. However, doing so necessitates a re-evaluation by the committee and requires the same number of approvals as a new application. If your application has been accepted and during development you find that your project significantly deviates from the original specifications, please open a new pull request that modifies the existing application. This also applies in case of significant delays.
