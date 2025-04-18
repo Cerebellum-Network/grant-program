@@ -32,7 +32,7 @@ The goal of PayCere is to reduce user friction and simplify the onboarding proce
 
 ### LinkedIn Profiles
 
-## Development Roadmap :nut_and_bolt:
+## Development Roadmap:
 
 ### Overview
 - **Total Estimated Duration:** 2 weeks
