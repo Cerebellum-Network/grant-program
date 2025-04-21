@@ -1,4 +1,4 @@
-# Cere DDC Update: Smart Contract to Bridge Tokens and Automatic DDC Update
+# Cere Developer Console Improvement: Smart Contract to Bridge Tokens and Automatic DDC Update
 
 ## Proposal submitted to the Cere Foundation on April 21, 2025, by Nikhil Bhintade
 
