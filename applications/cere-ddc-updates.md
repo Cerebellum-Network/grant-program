@@ -84,11 +84,8 @@ Regarding the DDC, I will add more details soon—I haven’t reviewed it yet. T
 
 ## Future Plans
 
-Please include here:
+The current future plans are limited to updating the smart contract if the team decides to conduct an audit. If the team proceeds with an audit through an auditing firm, we can update the contracts based on the audit report. Additionally, if the team wants further updates to the developer console, we’re open to discussing that; assuming the submitted work for the bounty is satisfactory.
 
--   How you intend to finance the project's long-term maintenance and development
--   How you intend to use, enhance, and promote your project in the short term
--   The team’s long-term plans and intentions regarding the project
 
 ## Preferred Method of Fund Delivery
 
@@ -99,9 +96,11 @@ Please include here:
 
 ## Other Bio, Details, or Thoughts
 
-Regarding the smart contract, I’m fairly confident the team isn’t expecting an audit. However, if one is conducted, we’re open to implementing the suggested changes.
+Regarding the smart contract, I’m fairly confident the team isn’t expecting an audit. Still, I’d like to confirm, please let us know in the PR comments.
 
-There is one remaining bounty I can pick up as well. However, I’d like to discuss the ideal flow first, which is why it hasn’t been included here. If the team is okay with us handling the entire scope, we can do that after discussion. In that case, the timeline would increase by around 10 days.
+There is one remaining bounty I can take on as well. However, I’d like to first discuss the flow, which is why it hasn’t been included here. If the team is okay with us handling all three bounties, we’re happy to do so after discussing the flow. In that case, the timeline would increase by approximately 10 days.
+
+Also, I wanted to check if it would be possible to receive the full $2,000 budget if we decide to take on all three bounties. Please let me know about that as well in the PR comments.
 
 ---
 
