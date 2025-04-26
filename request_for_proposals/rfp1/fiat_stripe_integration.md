@@ -56,7 +56,7 @@ Additionally, the system will:
 | 1 | Stripe Payment Integration      | Integrate Stripe to accept USD/EUR fiat payments.                            |
 | 2 | Fiat to USDC Conversion          | Handle conversion from fiat payments to USDC tokens internally.              |
 | 3 | Smart Contract for Swapping      | Create smart contract to swap USDC for CERE tokens on DEX.                   |
-| 4 | Real-Time Price Lookup           | Integrate service (like CoinGecko or Chainlink) to fetch current USDC/CERE prices. |
+| 4 | Real-Time Price Lookup           | Integrate service (like CoinGecko or Chainlink) to fetch current USDC/CERE prices.(Need to research the desing for secure calculation and layout the vulnerablitly in design approach and use best method)  |
 
 ---
 
