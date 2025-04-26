@@ -78,7 +78,7 @@ System flow:
 
 ## DesingFlow
 
-``json
+```json
 {
   "title": "Proposal: Fiat-Based Top-Up for DDC Accounts (via Stripe)",
   "abstract": "This proposal enables users to top up their Decentralized Data Cluster (DDC) accounts using fiat payments through Stripe (credit/debit cards). Users will no longer need to manually acquire cryptocurrencies. The system will automatically convert fiat to USDC, swap USDC to CERE, and bridge CERE to the Cere Mainnet to credit DDC accounts.",
@@ -130,5 +130,5 @@ System flow:
   ],
   "funds_delivery": "USDC on Ethereum Address: 0x00000"
 }
-``
+```
 
