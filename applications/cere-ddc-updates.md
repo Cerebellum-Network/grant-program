@@ -62,7 +62,7 @@ For the first bounty (swap smart contract), the following features will be inclu
     -   The contract swaps the given token to CERE
     -   Then bridges those tokens to the CERE mainnet using Hyperbridge
 
-Regarding the DDC, I will add more details soon—I haven’t reviewed it yet. The current focus has been on understanding Hyperbridge and the token-bridging process.
+Automated balance updates on DDC, setup service that automatically topup the balance of the account. On developer console they can set the threshold at which this should be triggered and a button to enable it if user wants this functionality.
 
 ### Milestone 1 — Smart Contract Functionality
 
@@ -80,7 +80,7 @@ Regarding the DDC, I will add more details soon—I haven’t reviewed it yet. T
 
 | Number | Deliverable           | Specification                                                                       |
 | ------ | --------------------- | ----------------------------------------------------------------------------------- |
-| 1      | DDC Automatic Updates | Haven’t had a chance to finalize the details yet, but an outline will be ready soon |
+| 1      | DDC Automatic Updates | Automated updates top ups which triggers when DDC balance goes below certain amount |
 
 ## Future Plans
 
@@ -101,6 +101,8 @@ Regarding the smart contract, I’m fairly confident the team isn’t expecting 
 There is one remaining bounty I can take on as well. However, I’d like to first discuss the flow, which is why it hasn’t been included here. If the team is okay with us handling all three bounties, we’re happy to do so after discussing the flow. In that case, the timeline would increase by approximately 10 days.
 
 Also, I wanted to check if it would be possible to receive the full $2,000 budget if we decide to take on all three bounties. Please let me know about that as well in the PR comments.
+
+Update: while searching for on-ramps I came across [Transak One](https://transak.com/transak-one) which might be interesting but need help of team to get sandbox credentials and we can do development. With Transak One user don't even have to connect to ETH wallet and flow will be very straight forward. Let me know what you guys think.
 
 ---
 
