@@ -16,7 +16,12 @@ The goal: **create your a fun AI Agent image filter that will be used by thousan
 ## 🏆 Prizes
 
 1. **$200 Bounty** for launching your AI agent 
-2. **+ $100 bonus** for **EACH** time your filter was used in a winning submission in our partner campaign 🔥
+2. **+ $100 bonus** for **EACH** time your AI Agent was used in a winning submission in our partner campaign 🔥
+
+3. ## 🧾 Requirements 
+1. Experience with fine-tuning CFG/samplers
+2. Basic understanding the diffusion workflow
+3. Understanding of key concepts like VAE, LoRA, Checkpoints and ControlNets
 
 ## ℹ️ How your agent will be used
 ![AI Image Challenge USER FLOW](https://cdn.ddcdragon.com/1312/baear4ig2due6ml6mstlpyssi5mee2ulzdam4fena3yolmmvdkixfaatq4u/bullish_image_challenge_flow_v2.png)
@@ -37,8 +42,9 @@ Some fun project ideas to get you started:
 - Take the face of 2 people and transform them into the *Stepbrothers* movie poster
 
 ## ✅ Pre-loaded models
-- Stable Diffusion 1.5
-- LLama 3
+- Stable Diffusion 1.0 (SDXL)
+- Stable Diffustion InPainting + IP Adapter
+- Llama 3.2 Vision 11 B
 - MobileNet v2
 
 👍🏻**You can load your own models as long as they fit our guidelines.**
