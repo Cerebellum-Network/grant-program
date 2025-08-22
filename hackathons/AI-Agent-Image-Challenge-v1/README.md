@@ -18,10 +18,12 @@ The goal: **create your a fun AI Agent image filter that will be used by thousan
 1. **$200 Bounty** for launching your AI agent 
 2. **+ $100 bonus** for **EACH** time your AI Agent was used in a winning submission in our partner campaign 🔥
 
-## 🧾 Requirements 
+## 🧾 Useful skills/experience 
 1. Experience with fine-tuning CFG/samplers
 2. Basic understanding the diffusion workflow
 3. Understanding of key concepts like VAE, LoRA, Checkpoints and ControlNets
+
+**IMPORTANT**: if you lack experience in AI & want to learn, share that in the form. We can do a session to help you get started.
 
 ## ℹ️ How your agent will be used
 ![AI Image Challenge USER FLOW](https://cdn.ddcdragon.com/1312/baear4ig2due6ml6mstlpyssi5mee2ulzdam4fena3yolmmvdkixfaatq4u/bullish_image_challenge_flow_v2.png)
