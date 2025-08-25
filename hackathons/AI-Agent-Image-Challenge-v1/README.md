@@ -239,7 +239,7 @@ Expected response:
 ## 📅 Timeline
 
 - Applications open: Wednesday Aug 20th 16:00 UTC  
-- Submissions due:  Wednesday Aug 27th 23:00 UTC  
+- Submissions due:  Wednesday Sep 3rd 23:00 UTC  
 - Partner campaign kickoff: Sep 3rd 12:00 UTC
 
 ---
