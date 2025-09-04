@@ -1,29 +1,18 @@
 # Cere AI Agent Image Challenge (Closed Beta)
-This is your chance to learn how to build an AI agent that can immediatly be dropped into a user data stream!
+This is your chance to be among the **first external developers** to build custom AI agents on our closed beta platform.
 
-The goal: **create your a fun AI Agent image filter that will be used by thousands of users**.
+The goal: **create your own agent flow (image filter) that produces consistent results on par with ChatGPT**.
 
 ## 🎯 Challenge Overview
 
 - Create & deploy a Computer Vision AI agent using Cere’s AI stack – Doing something fun, creative, and viral-ready. Be sure to design your agent in such a way that brand assets can be included (e.g. company logo or a mascot) to customize the experience.
-- Every developer that succesfully launches an AI agent that meets the quality requirements will receive **$200**.  
-- On top of that, your agent will be used during our partner campaign and you’ll earn an **additional $100** each time a user wins by using your AI agent!
-- **Limited slots are available, so be quick to sign up!**
-
-
-**Can't wait to start?** Apply for access: [Noteforms Application](https://noteforms.com/forms/bullish-image-challenge-ajxsbr)  
+- Each developer to deploy a fun AI Agent that can be used in our partner campaign will receive **$200 each**.  
+- On top of that, if your AI Agent is used in the live partner campaign you can win a bonus! You’ll earn an **additional $100** each time a user wins by using your AI agent.
 
 ## 🏆 Prizes
 
-1. **$200 Bounty** for launching your AI agent 
-2. **+ $100 bonus** for **EACH** time your AI Agent was used in a winning submission in our partner campaign 🔥
-
-## 🧾 Useful skills/experience 
-1. Experience with fine-tuning CFG/samplers
-2. Basic understanding the diffusion workflow
-3. Understanding of key concepts like VAE, LoRA, Checkpoints and ControlNets
-
-**IMPORTANT**: if you lack experience with AI Diffusion models & want to learn, share that in the form. We can do a session to help you get started.
+1. **$200 each** for each successful AI Agent deployment 
+2. **+ $100 bonus** for AI Agents that are used for winning submissions 
 
 ## ℹ️ How your agent will be used
 ![AI Image Challenge USER FLOW](https://cdn.ddcdragon.com/1312/baear4ig2due6ml6mstlpyssi5mee2ulzdam4fena3yolmmvdkixfaatq4u/bullish_image_challenge_flow_v2.png)
@@ -43,10 +32,10 @@ Some fun project ideas to get you started:
 - Swap whatever print is on a T-shirt into the company logo  
 - Take the face of 2 people and transform them into the *Stepbrothers* movie poster
 
+
 ## ✅ Pre-loaded models
-- Stable Diffusion 1.0 (SDXL)
-- Stable Diffustion InPainting + IP Adapter
-- Llama 3.2 Vision 11 B
+- Stable Diffusion 1.5
+- LLama 3
 - MobileNet v2
 
 👍🏻**You can load your own models as long as they fit our guidelines.**
@@ -68,47 +57,9 @@ This guide will help you deploy your first agent on the Cere AI Stack.
 
 ---
 
-### Step 2: Set Up Your Testing Environment (Telegram Channel)
+### Step 2: Deploy Your First Agent
 
-#### 2.1 Create a New Telegram Group
-
-1. Open Telegram  
-2. Tap the menu (☰) → **New Group**  
-3. Enter channel name (e.g., `Cere Image Challenge`)  
-4. Click **Create**  
-
-#### 2.2 Configure Group Settings
-
-1. Tap the menu (☰) → **Manage group**  
-2. Add a profile picture  
-3. Click on **Group type** → change to **Public**  
-4. Set your group name (e.g., `cereimagechallenge`)  
-
-#### 2.3 Invite the Bot to Your Channel
-
-1. Tap the menu (☰) → **Manage group**  
-2. Click **Members → Add member** → add our bot (`STG Cere Media Bot` for staging, `Cere Media Bot` for production)  
-3. Tap the menu (☰) → **Manage group**  
-4. Click **Administrators → Add administrator** → add the bot again  
-5. Remove all rights  
-
-#### 2.4 Whitelist your channel
-
-1. DM Bren on Telegram ([@nerbke](https://t.me/nerbke)) and ask him to whitelist your channel for the bot
-2. Share the link to your channel with Bren
-3. Wait for Bren to confirm your channel is whitelisted
-
-#### 2.5 Verify Bot Access
-
-1. Send `/help` command in the channel  
-2. Bot should respond with instructions  
-3. If bot doesn’t respond, check administrator permissions  
-
----
-
-### Step 3: Deploy Your First Agent
-
-#### 3.1 Choose Your Model
+#### 2.1 Choose Your Model
 
 1. Navigate to [ROB Platform](https://rob.stage.cere.io/) 
 2. Login via email  (use the e-mail you signed up with)
@@ -118,33 +69,87 @@ This guide will help you deploy your first agent on the Cere AI Stack.
 6. Copy the code & save it somewhere (e.g. in a text file)
 7. Close **Model Registry**  
 
-#### 3.2 Create Your Agent
+#### 2.2 Create Your Agent
 
 1. Go to **Agent Registry**  
 2. Click **Create Agent**  
 3. Select **Programmable Agent**  
-4. Configure details (example):
+4. Configure details - make sure you follow this naming format: "BIC - your name - your agent name"
    ```
-     name: "Smart Photo Filter",
-     description: "AI-powered filter that transforms selfies into mascot PFPs"
+     name: "BIC - Bren - Awesome Meme Generator Agent"
+     description: "AI-powered filter that transforms selfies into web3 memes"
    ```
-5. Skip tools setup (not supported yet)  
+5. Skip tools setup 
 6. Add task
 7. Copy & paste the **Quickstart code** you copied earlier from the model registry
-8. Review & submit your agent  
+8. Review & submit your agent
+9. IMPORTANT: ask the admin (eg Bren on Discord) to deploy your agent into the datastream
 
-#### 3.3 Test Your Agent
+#### 2.3 Test Your Agent
 
-1. Go to your test Telegram channel
-2. Run the `/fun` command
-3. Reply to the bot by submitting/attaching an image
-4. Your AI agent will return a processed result to the bot which will share it in the Telegram channel
+1. Go to the Agent Registry
+2. Filter on "own models"
+3. Click on your model
+4. Click on "Playground"
+5. Run a first test
+
+**Tip:** the output of the image models is a BASE64 image. You can quickly convert it to a viewable format here: https://base64.guru/converter/decode/image.
 
 ---
 
-### Step 4: (Optional) Deploy Your Own Model
+### Step 3: Set Up Your Testing Environment (Telegram Channel)
 
-#### 4.1 Package a Model
+#### 3.1 Create a New Telegram Group
+
+1. Open Telegram  
+2. Tap the menu (☰) → **New Group**  
+3. Enter channel name (e.g., `Cere Image Challenge`)  
+4. Click **Create**  
+
+#### 3.2 Configure Group Settings
+
+1. Tap the menu (☰) → **Manage group**  
+2. Add a profile picture  
+3. Click on **Group type** → change to **Public**  
+4. Set your group name (e.g., `cereimagechallenge`)  
+
+#### 3.3 Invite the Bot to Your Channel
+
+1. Tap the menu (☰) → **Manage group**  
+2. Click **Members → Add member** → add our bot (`STG Cere Media Bot` for staging, `Cere Media Bot` for production)  
+3. Tap the menu (☰) → **Manage group**  
+4. Click **Administrators → Add administrator** → add the bot again  
+5. Remove all rights  
+
+#### 3.4 Whitelist your channel
+
+1. DM Bren on Telegram ([@nerbke](https://t.me/nerbke)) and ask him to whitelist your channel for the bot
+2. Share the link to your channel with Bren
+3. Wait for Bren to confirm your channel is whitelisted
+
+#### 3.5 Verify Bot Access
+
+1. Send `/help` command in the channel  
+2. Bot should respond with instructions  
+3. If bot doesn’t respond, check administrator permissions  
+
+---
+
+### Step 4: Concierge agent
+Using the concierge agent you can trigger your agent(s) based on the Telegram data stream coming in through your bot.
+
+1. Go to your organisation dashboard in ROB
+2. Click on "Engagements"
+3. Click & edit the "AI Image Agent challenge Engagement" that was prepared for you (if you don't see this, ask Bren on Discord ot make it)
+4. Click on the "CONCIERGE AGENT" tab
+5. Look for "// CHANGE THIS CODE TO YOUR BOT; in this example we use the faceSwapAgent" and replace the code with your agent(s)
+6. Go to your Telegram channel and type "/fun" to invoke your agent flow
+
+---
+
+### Step 5: (Optional) Deploy Your Own Model
+
+#### 5.1 Package a Model
 
 Example using HuggingFace MobileNetV2:
 
@@ -161,7 +166,7 @@ cd ..
 
 Result: you now have `mobilenet_v2_cv.zip` (~14MB) ready for upload.
 
-#### 4.2 Upload Model to DDC
+#### 5.2 Upload Model to DDC
 
 1. Go to: [Cere Developer Console](https://stage.developer.console.cere.network/)  
 2. Sign up with your e-mail  
@@ -239,7 +244,7 @@ Expected response:
 ## 📅 Timeline
 
 - Applications open: Wednesday Aug 20th 16:00 UTC  
-- Submissions due:  Wednesday Sep 7th 23:00 UTC  
+- Submissions due:  Wednesday Sep 8th 23:00 UTC  
 - Partner campaign kickoff: Sep 8th 12:00 UTC
 
 ---
