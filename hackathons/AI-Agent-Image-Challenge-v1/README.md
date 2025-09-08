@@ -85,15 +85,7 @@ This guide will help you deploy your first agent on the Cere AI Stack.
 8. Review & submit your agent
 9. IMPORTANT: ask the admin (eg Bren on Discord) to deploy your agent into the datastream
 
-#### 2.3 Update the Concierge Agent Test Your Agent
-
-1. Click on "Engagements"
-2. Edit "AI Image Agent challenge Engagement"
-3. Click on the "Concierge Agent" tab
-4. Edit the code commented between //START annd //END
-5. Replace the faceSwapAgent agent with your agent
-
-#### 2.4 Test Your Agent
+#### 2.3 Test Your Agent in Playground
 
 1. Go to the Agent Registry
 2. Filter on "own models"
@@ -105,7 +97,7 @@ This guide will help you deploy your first agent on the Cere AI Stack.
 
 ---
 
-### Step 3: Set Up Your Testing Environment (Telegram Channel)
+### Step 3: Set Up Your Testing Environment (Telegram Group)
 
 #### 3.1 Create a New Telegram Group
 
