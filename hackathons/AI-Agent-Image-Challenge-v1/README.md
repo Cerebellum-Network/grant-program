@@ -116,7 +116,7 @@ This guide will help you deploy your first agent on the Cere AI Stack.
 #### 3.3 Invite the Bot to Your Channel
 
 1. Tap the menu (☰) → **Manage group**  
-2. Click **Members → Add member** → add our bot (`STG Cere Media Bot` for staging, `Cere Media Bot` for production)  
+2. Click **Members → Add member** → add our bot (`@STG_DDC_Streaming_Bot` for staging, `Cere Media Bot` for production)  
 3. Tap the menu (☰) → **Manage group**  
 4. Click **Administrators → Add administrator** → add the bot again  
 5. Remove all rights  
