@@ -91,8 +91,9 @@ The primary objective is to **deploy multi-agents within our system** to:
 3. Select **Programmable Agent**  
 4. Configure details - make sure you follow this naming format: "BIC - your name - your agent name"
    ```
-     name: "BIC - Bren - Awesome Meme Generator Agent"
-     description: "AI-powered filter that transforms selfies into web3 memes"
+    name: "CSC - Alice - Call Sentiment Analyzer"
+    description: "Multi-agent pipeline for speech-to-text, semantic context building, and sentiment analysis"
+
    ```
 5. Skip tools setup 
 6. Add task
