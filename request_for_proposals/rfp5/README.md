@@ -42,7 +42,6 @@ The primary objective is to **deploy multi-agents within our system** to:
 - Documentation describing:  
   - System architecture & agent interactions.  
   - How to extend the workflow (e.g., adding new agents).  
-  - Deployment instructions (Docker/K8s preferred).  
 
 ---
 
