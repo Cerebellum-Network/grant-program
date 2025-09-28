@@ -2,56 +2,48 @@
 
 ## Summary
 
-Unlike traditional setups, **Cere’s AI Stack allows developers to deploy an AI agent onto a live data stream in minutes**, without the need to:  
-- Set up their own server.  
-- Host and manage models themselves.  
-- Build and maintain complex data pipelines.  
-- Worry about scaling or security.  
-
-This challenge provides developers with the opportunity to showcase how they would design agents that bring real-world value by leveraging Cere’s infrastructure.
-
-Participants are expected to:
-1. Select and deploy one or more models on Cere's DDC.  
-2. Design and deploy one or more custom agents in a modular way.  
-3. Link these agents into a complete **agentic workflow**.  
-4. Document their proposal following the official template before starting any coding.  
-
-⚠️ **Important**: Developers must submit and receive approval for their proposal before beginning implementation.
+We invite proposals for the development and deployment of a **multi-agent system** that ingests raw customer service voice data, processes it into structured insights, and performs real-time sentiment and trigger analysis. The system will demonstrate the orchestration of multiple AI agents (via Raft, EventRelay, and compatible frameworks) collaborating to produce structured, actionable intelligence from call center recordings.
 
 ---
 
-## Focus Areas
+## The Goal
 
-Proposals should focus on one of the following key areas:  
+The primary objective is to **deploy multi-agents within our system** to:  
+1. Ingest WAV/MP3 call recordings.  
+2. Accurately transcribe voice into structured, time-stamped text.  
+3. Build a semantic context tree highlighting key aspects of each conversation.  
+4. Perform time-series sentiment analysis and identify triggers for major emotional shifts.  
+5. Aggregate outputs into a report that can be rendered in a **test UI page** for review.
 
-- **Image Diffusion** (entertainment, consumer apps, etc.)  
-  - Data stream: images provided by users  
+---
 
-- **Enterprise Computer Vision** (security, maintenance, etc.)  
-  - Data stream: video/images provided by drones  
+## Input Data
 
-- **Natural Language Processing (NLP)** (customer support, sentiment analysis, etc.)  
-  - Data stream: text provided by users  
+- **Voice Recordings**: WAV/MP3 format.  
+- Data can be **synthesized test calls** or **existing anonymized test recordings**.  
+- Agents should process streams and/or batch data consistently.
 
 ---
 
 ## Deliverables
 
-Each submission must include the following, **before coding begins**:
+- **Multi-agent pipeline implementation** (open-sourced under compatible license).  
+- **Demo/test UI page** for visualization of results.  
+- **Sample processed outputs** from provided recordings.  
+- Documentation describing:  
+  - System architecture & agent interactions.  
+  - How to extend the workflow (e.g., adding new agents).  
+  - Deployment instructions (Docker/K8s preferred).
 
-1. **Proposal Document** (using the [Application Template](https://github.com/Cerebellum-Network/grant-program/blob/master/applications/application_template.md)) that clearly describes:  
-   - The **use case**.  
-   - The **agent flow structure** (how multiple agents interact).  
-   - The **models** to be used (open source, preferably fine-tuned).  
+---
 
-2. **Technical Design**:  
-   - **1 or more custom models**.  
-   - **1 or more custom modular agents**, each running inference against those models.  
-   - A complete **agentic workflow** that links these agents together.  
+## Evaluation Criteria
 
-3. **Documentation & Submission**:  
-   - Submit a complete proposal that describes the above clearly and in detail.  
-   - The proposal must be approved by the Cere team before coding starts.  
+- **Technical Completeness**: Robustness of agents, especially under noisy input.  
+- **Accuracy**: Transcription, semantic extraction, and sentiment detection fidelity.  
+- **Integration**: Ability of agents to share data via Raft/EventRelay.  
+- **Usability**: Clarity of structured output and UI display.  
+- **Extensibility**: Ease of adding future agents or adapting workflow.  
 
 ---
 
