@@ -1,3 +1,7 @@
+🚨 **Reminder: Review the Contribution Guidelines!** 🚨
+
+Before submitting your proposal, please make sure to carefully review the [Contribution Guidelines](https://github.com/Cerebellum-Network/grant-program/blob/master/README.md). ✅
+
 # RFP: AI Agent Challenge – Open Developer Track
 
 ## Summary
@@ -6,7 +10,7 @@ We invite proposals for the development and deployment of a **multi-agent system
 
 ---
 
-## The Goal
+## Scope of Work 
 
 The primary objective is to **deploy multi-agents within our system** to:  
 1. Ingest WAV/MP3 call recordings.  
@@ -44,6 +48,14 @@ The primary objective is to **deploy multi-agents within our system** to:
 - **Integration**: Ability of agents to share data via Raft/EventRelay.  
 - **Usability**: Clarity of structured output and UI display.  
 - **Extensibility**: Ease of adding future agents or adapting workflow.  
+
+---
+
+## 📬 Current Applications
+
+| Team                  | #PR  | Status  |
+|-----------------------|------|---------|
+| _No applications yet_ |      |         |
 
 ---
 
