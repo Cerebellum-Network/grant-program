@@ -49,8 +49,6 @@ The primary objective is to **deploy multi-agents within our system** to:
 
 ## Quickstart Guide
 
-The following steps outline how developers will eventually execute their approved proposal. These are included for reference and to help structure your submission.
-
 ### Step 1: Prerequisites
 
 1. Apply for access: [Noteforms Application](https://noteforms.com/forms/bullish-image-challenge-ajxsbr)  
@@ -199,7 +197,5 @@ Expected response:
 
 ## Resources
 
-- **Civitai (model discovery)**: https://civitai.com/  
-- **Hugging Face (model discovery)**: https://huggingface.co/  
 - **Application Template**: https://github.com/Cerebellum-Network/grant-program/blob/master/applications/application_template.md  
 - **Grant Program Guidelines**: https://github.com/Cerebellum-Network/grant-program/blob/master/README.md  
