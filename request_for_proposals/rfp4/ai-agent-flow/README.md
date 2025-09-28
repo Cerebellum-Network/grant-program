@@ -34,10 +34,7 @@ The primary objective is to **deploy multi-agents within our system** to:
 - **Multi-agent pipeline implementation** (open-sourced under compatible license).  
 - **Demo/test UI page** for visualization of results.  
 - **Sample processed outputs** from provided recordings.  
-- Documentation describing:  
-  - System architecture & agent interactions.  
-  - How to extend the workflow (e.g., adding new agents).  
-  - Deployment instructions (Docker/K8s preferred).
+- Documentation describing agent architecture & agent interactions.  
 
 ---
 
