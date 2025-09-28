@@ -22,29 +22,6 @@ The primary objective is to **deploy multi-agents within our system** to:
 
 ---
 
-## Input Data
-
-- **Game Event Logs**: Structured event records (e.g., “Level Cleared”, “Item Acquired”, “Death”).  
-- **Chat Data**: In-game text messages and transcribed voice chat.  
-
----
-
-## Deliverables
-
-- **Multi-agent pipeline implementation** (open-sourced under compatible license).  
-- **Session summary report generator** producing outputs such as:  
-  - **Total Time**  
-  - **Final Progression State**  
-  - **Top 3 Frustration Moments**  
-  - **Total Flow State Duration**  
-- **Demo/test UI page** for visualization of results.  
-- **Sample processed outputs** from provided session data.  
-- Documentation describing:  
-  - System architecture & agent interactions.  
-  - How to extend the workflow (e.g., adding new agents).  
-
----
-
 ## Suggested Multi-Agent Functionality
 
 ### Agent 1 – Game Event Ingestion & Progression
@@ -73,15 +50,36 @@ The primary objective is to **deploy multi-agents within our system** to:
   - **Total Time**  
   - **Final Progression State**  
   - **Top 3 Frustration Moments**  
+  - **Total Flow State Duration**
+ 
+---
+
+## Input Data
+
+- **Game Event Logs**: Structured event records (e.g., “Level Cleared”, “Item Acquired”, “Death”).  
+- **Chat Data**: In-game text messages and transcribed voice chat.  
+
+---
+
+## Deliverables
+
+- **Multi-agent pipeline implementation** (open-sourced under compatible license).  
+- **Session summary report generator** producing outputs such as:  
+  - **Total Time**  
+  - **Final Progression State**  
+  - **Top 3 Frustration Moments**  
   - **Total Flow State Duration**  
+- **Demo/test UI page** for visualization of results.  
+- **Sample processed outputs** from provided session data.  
+- **Documentation** describing agent architecture & agent interactions.  
 
 ---
 
 ## Evaluation Criteria
 
-- **Technical Completeness**: Robustness of agents, especially under noisy or unstructured chat data.  
+- **Technical Completeness**: Robustness of agents 
 - **Accuracy**: Fidelity of progression metrics, sentiment detection, and frustration/flow identification.  
-- **Integration**: Ability of agents to share data via Raft/EventRelay.  
+- **Integration**: Ability of agents to share data via Raft.  
 - **Usability**: Clarity of structured outputs and UI display.  
 - **Extensibility**: Ease of adding new agents or extending the workflow to more data sources.  
 
