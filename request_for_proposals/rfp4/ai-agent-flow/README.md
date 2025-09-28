@@ -20,6 +20,24 @@ The primary objective is to **deploy multi-agents within our system** to:
 5. Aggregate outputs into a report that can be rendered in a **test UI page** for review.
 
 ---
+## Suggested Multi-Agent Functionality
+
+### Agent 1: Speech-to-Text Agent
+- Functional transcription with timestamps.  
+
+### Agent 2: Semantic Context Builder
+- Context tree and conversation summaries.  
+- Outputs “Customer Issue / Agent Action / Resolution Status” consistently.  
+
+### Agent 3: Sentiment & Trigger Analysis
+- Sentiment time-series.  
+- Detection of sharp emotional transitions with text trigger .  
+
+### Agent 4: Agent Collaboration & UI Demo
+- Integrated agent pipeline.  
+- Test UI displaying structured report.
+
+---
 
 ## Input Data
 
