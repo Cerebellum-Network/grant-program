@@ -6,22 +6,22 @@
 
 ## Why this hackathon?
 
-Learn the building blocks of modern, event‑driven AI apps — **Streams → Rafts → Agents → Engagements (Concierge)** — and go from **idea → live deployment** fast. You’ll process **Telegram group data** in real time, index it, trigger agents, and ship something fun and useful.
+Learn the building blocks of modern, event‑driven AI apps: **Stream → Raft → Engagements → Agents**; and go from **idea → live deployment** fast. You’ll process **Telegram group data** in real time, index it, trigger agents, and ship something fun and useful that any student on the UofT campus can try out for themselves.
 
-> After the hackathon you’ll keep access to ROB so you can create new Streams (e.g. Discord), spin up new agents (spam filter, support agent, rewards bot), and continue iterating.
+> After the hackathon you’ll keep access to ROB so you can create new Streams (e.g. Discord or X), spin up new agents (spam filter, support agent, rewards bot), and continue iterating. You'll also be ready to dive into paid bounties like [RFP4: Customer Service Calls Agent](https://github.com/Cerebellum-Network/grant-program/tree/master/request_for_proposals/rfp4) and [RFP5: AI Game Sessions Analysis](https://github.com/Cerebellum-Network/grant-program/tree/master/request_for_proposals/rfp5)
 
 ---
 
 ## Quickstart (0 → live)
 
 1. **Sign up**
-   Use the **UofT student email** on the sign‑up form you receive from the club. We’ll provision access to **ROB** (Cere’s agent orchestration environment) to student accounts only.
+   Use the **UofT student email** on the [sign‑up form](https://noteforms.com/forms/bullish-image-challenge-ytl4yu) you receive from the club. We’ll provision access to **ROB** (Cere’s agent orchestration environment) to student accounts only.
 
 2. **Create your Stream**
    Create a **Telegram Message Stream** in your workspace. This connects to the provided data service that publishes Telegram events.
 
 3. **Add a Raft (Indexing)**
-   Create a **Raft** for your stream to store & index messages (RedisGraph under the hood). The Raft will emit events that **trigger agents**.
+   Create a **Raft** for your stream to store & index messages. The Raft will emit events that **trigger agents**.
 
 4. **Create agents**
    Author one or more agents (e.g., Filtering, Emoji, Embeddings, Clustering, Topic Naming, LLM Vision). **Always test each agent in the Playground** first.
@@ -41,10 +41,10 @@ Learn the building blocks of modern, event‑driven AI apps — **Streams → Ra
 
 * **Stream**: live event feed (Telegram messages).
 * **Raft**: indexes/stores stream data and emits triggers.
-* **Agent**: a modular function with a `handle(event, context)` entry that **must return a plain JavaScript object (JSON‑serializable)**.
+* **Agent**: a modular function with a `handle(event, context)` entry that **must return a plain JavaScript object**.
 * **Playground**: run & iterate on an agent with sample inputs.
 * **Engagement**: a declarative flow — usually orchestrated by the **Concierge** agent — that calls your agents in sequence/branches.
-* **Data Service**: the runtime that hosts models and deployed agents used by scripts.
+* **Data Service**: top-level container that organizes your data sources, indexing rafts, and agent engagements into a deployable pipeline.
 
 ---
 
@@ -53,7 +53,7 @@ Learn the building blocks of modern, event‑driven AI apps — **Streams → Ra
 These models are already available to use in your agents:
 
 * **Llama 3.2 11B Vision Instruct** — multimodal text+image generation & reasoning
-* **MobileNetV2 Image Classification** — lightweight image classifier (ImageNet)
+* **MobileNetV2 Image Classification** — lightweight image classifier
 * **OWL‑ViT Base Patch32** — zero‑shot object detection
 * **SAM2 Hiera Large** — image segmentation (prompted)
 * **Stable Diffusion XL Base 1.0** — text‑to‑image generation
@@ -67,25 +67,39 @@ These models are already available to use in your agents:
 ## Example: call a pre‑loaded model from an agent
 
 ```ts
-// src/agents/visionLabeler.ts
-// Example: use OWL‑ViT zero‑shot detection inside an agent
-import { z } from "zod";
-
-export const inputSchema = z.object({
-  imageURL: z.string().url(),
-  labels: z.array(z.string()).min(1)
-});
-
-export async function handle(event: any, context: any) {
-  const { imageURL, labels } = inputSchema.parse(event);
-
-  const result = await context.models["owlvit-base-patch32"].detect({
-    imageURL,
-    labels
-  });
-
-  // ✅ Always return JSON
-  return { result };
+async function handle(event: Event, ctx: Context) {
+  const { imageUrl, objectsToFind, minConfidence = 0.3 } = event.payload;
+  
+  const response = await ctx.fetch('http://<ask_for_ip>:8000/inference', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: {
+        bucket: "1317",
+        path: "fs/owlvit-base-patch32.zip"
+      },
+      input: [
+        { type: "image", link: imageUrl, parameter: "image" }
+      ],
+      options: {
+        candidate_labels: objectsToFind,
+        task: "zero-shot-object-detection",
+        threshold: minConfidence
+      }
+    })
+  }).then(res => res.json());
+  
+  const detections = response.output.filter(det => det.score >= minConfidence);
+  
+  return {
+    totalDetections: detections.length,
+    detections: detections.map(det => ({
+      object: det.label,
+      confidence: det.score,
+      location: det.box
+    })),
+    processingTime: response.metrics.inference_time
+  };
 }
 ```
 
@@ -96,24 +110,24 @@ export async function handle(event: any, context: any) {
 ## Example: call an external API (Runware) from an agent
 
 ```ts
-// src/agents/runwareImage.ts
-// Generates a retro 16‑bit image using Runware’s API, then returns base64
-import Jimp from "jimp";
+import {Jimp, JimpMime} from "jimp";
 
-export async function handle(event: any, context: any) {
+export async function handle(event: Event, context: Context) {
   const API = "https://api.runware.ai/v1";
-  const KEY = context.secrets.RUNWARE_API_KEY; // set in workspace secrets
+  const KEY = "YourRunwareKEY"; 
 
-  const payload = [{
+  const payload = [
+    {
     taskType: "imageInference",
-    taskUUID: context.uuid(),
+    taskUUID: "0e2c3e7e-91a6-4d2f-9d7a-3a0d0c8a1a1b",
     model: "runware:101@1",
     width: 1024,
     height: 1024,
     numberResults: 1,
     positivePrompt: "16‑bit retro image depicting a 1980’s black computer terminal prompt that says 'hello world' in green letters",
     negativePrompt: "low quality, blurry, deformed, text, keyboard, computer"
-  }];
+  }
+  ];
 
   const res = await context.fetch(API, {
     method: "POST",
@@ -127,9 +141,9 @@ export async function handle(event: any, context: any) {
   if (!imageURL) throw new Error("Inference missing imageURL");
 
   const image = await Jimp.read(imageURL);
-  const base64 = await image.getBase64Async(Jimp.MIME_PNG);
+  const base64 = await image.getBase64("image/png");
 
-  return { result: { base64, imageURL } };
+  return { result: base64 };
 }
 ```
 
@@ -149,16 +163,11 @@ The **Concierge** agent is your flow conductor. Inside its script you can **call
 
 ```ts
 // Inside Concierge engagement script
-export async function handle(event: any, context: any) {
+export async function handle(event: Event, context: Context) {
   // Calls the helloWorld agent’s sayHelloWorld task
   const message = await context.agents.helloWorld.sayHelloWorld({});
 
-  // Use outputs to branch/route logic
-  if (message?.result?.text?.includes("hello")) {
-    // call more agents, write to raft, etc.
-  }
-
-  return { result: { ok: true, message } };
+  return { result: message };
 }
 ```
 
@@ -168,7 +177,7 @@ export async function handle(event: any, context: any) {
 
 ```ts
 // src/agents/helloWorld.ts
-export async function handle(event: any, context: any) {
+export async function handle(event: Event, context: Context) {
   const returnText = "hello world";
   // ✅ Always return a plain JS object (JSON‑serializable) from handle
   return { result: returnText };
@@ -177,8 +186,7 @@ export async function handle(event: any, context: any) {
 
 **Playground checklist**
 
-* Validate inputs with `zod` or equivalent
-* Log useful metadata with `context.log.info(...)`
+* Log useful metadata with `context.log(...)`
 * Keep outputs small (store blobs in Raft/files, return references)
 * Fail fast with helpful error messages
 * **Return a plain object** – values must be JSON‑safe (no `undefined`, functions, BigInt, circular refs; convert Dates with `.toISOString()`, Buffers to base64)
@@ -188,8 +196,8 @@ export async function handle(event: any, context: any) {
 ## Build path (suggested)
 
 1. **Hello World** agent → prove your toolchain
-2. **Image or text effect** (emoji/sticker overlay, meme caption, object tagger)
-3. **Chain multiple agents** with Concierge (filter → detect → inpaint → caption)
+2. **Image or text effect** (face swap, meme caption, object tagger)
+3. **Chain multiple agents** with Concierge (detect input → SD XL + ControlNet → caption)
 4. **Wire to Telegram** (react to messages/commands)
 5. **Polish & ship** (sandbox, then deploy)
 
@@ -198,17 +206,16 @@ export async function handle(event: any, context: any) {
 ## Best practices
 
 * Keep agents **single‑purpose** and stateless where possible
-* Use **fast CV models** for gating, heavier models for finals
+* Use **small purpose build models** where possible
 * Write **idempotent** logic (safe to retry)
 * Guardrail inputs (file type/size, prompt cleaning)
-* Return **structured JSON** consistently: `{ result, metrics?, debug? }`
+* Return **object** consistently at the end: `{ result: returnVar}`
 
 ---
 
-## Learn more
+## Resources
 
-* **ROB Platform Developer Onboarding Guide**: [https://www.notion.so/cere/ROB-Platform-Developer-Onboarding-Guide-eaa8764057c547f7a950e003469bb4be](https://www.notion.so/cere/ROB-Platform-Developer-Onboarding-Guide-eaa8764057c547f7a950e003469bb4be)
-* Background & challenge inspiration: Cere’s earlier **AI Agent Image Challenge** README (structure & flow)
+* Telegram Bot Github: https://github.com/cere-io/integration-telegram-app-bot
 
 ---
 
