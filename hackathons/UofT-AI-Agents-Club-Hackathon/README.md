@@ -222,6 +222,7 @@ export async function handle(event: Event, context: Context) {
 ## Resources
 
 * Telegram Bot Github: https://github.com/cere-io/integration-telegram-app-bot
+* Test Channel: https://t.me/uoftaiagentshackaton
 
 ---
 
