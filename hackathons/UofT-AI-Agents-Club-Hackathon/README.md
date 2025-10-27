@@ -17,28 +17,22 @@ Learn the building blocks of modern, event‑driven AI apps: **Stream → Raft �
 1. **Sign up**
    Use the **UofT student email** on the [sign‑up form](https://noteforms.com/forms/bullish-image-challenge-ytl4yu) you receive from the club. We’ll provision access to **ROB** (Cere’s agent orchestration environment) to student accounts only.
 
-2. **Create your Stream**
-   Create a **Telegram Message Stream** in your workspace. This connects to the provided data service that publishes Telegram events.
-
-3. **Add a Raft (Indexing)**
-   Create a **Raft** for your stream to store & index messages. The Raft will emit events that **trigger agents**.
-
-4. **Create agents**
+2. **Create agents**
    Author one or more agents (e.g., Filtering, Emoji, Embeddings, Clustering, Topic Naming, LLM Vision). **Always test each agent in the Playground** first.
 
-5. **Create an Engagement (Concierge)**
+3. **Create an Engagement (Concierge)**
    Use the **Concierge agent** to orchestrate your flow. Wire your Stream → Raft → Agents to form an **agent flow**.
 
-6. **Test in Sandbox**
+4. **Test in Sandbox**
    Run your engagement end‑to‑end in the **Sandbox** against live sample data.
 
-7. **Deployment**
+5. **Deployment**
    Once everything looks good, request deployment of your agents into the **Data Service** (see Concierge section below). Then ship your engagement.
 
-8. **Activity SDK**
+6. **Activity SDK**
    Use the Activity SDK to send a payload from your application e.g. you telegram bot into the stream, into the flow you build in ROB
 
-9. **Return result**
+7. **Return result**
     Return the result to your application end point (eg you telegram bot) in your engagement's concierge agent.
    
 ---
