@@ -35,6 +35,12 @@ Learn the building blocks of modern, event‑driven AI apps: **Stream → Raft �
 7. **Deployment**
    Once everything looks good, request deployment of your agents into the **Data Service** (see Concierge section below). Then ship your engagement.
 
+8. **Activity SDK**
+   Use the Activity SDK to send a payload from your application e.g. you telegram bot into the stream, into the flow you build in ROB
+
+9. **Return result**
+    Return the result to your application end point (eg you telegram bot) in your engagement's concierge agent.
+   
 ---
 
 ## Tech 101: the moving parts
