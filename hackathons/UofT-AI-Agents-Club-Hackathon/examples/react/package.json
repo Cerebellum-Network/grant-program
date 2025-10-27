@@ -1,0 +1,29 @@
+{
+  "name": "playground",
+  "private": true,
+  "version": "0.1.7",
+  "type": "module",
+  "scripts": {
+    "start": "vite --open",
+    "build": "tsc && vite build",
+    "playground": "npm run start",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@cere-activity-sdk/events": "0.1.7",
+    "@cere-activity-sdk/signers": "0.1.7",
+    "@cere-activity-sdk/ciphers": "0.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.10",
+    "vite-plugin-node-polyfills": "^0.21.0",
+    "vite-tsconfig-paths": "^4.3.2"
+  }
+}
