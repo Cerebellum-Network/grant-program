@@ -1,3 +1,6 @@
+🚨 **Reminder: Review the Contribution Guidelines!** 🚨
+
+Before submitting your proposal, please make sure to carefully review the [Contribution Guidelines](https://github.com/Cerebellum-Network/grant-program/blob/master/README.md). ✅
 # Game Data Onboarding Demo Grant
 **Goal:** Demonstrate onboarding of **game session data + voice** into an existing [**ROB**](https://rob.dev.cere.io/) stream, using **A6** ([testing framework](https://github.com/cere-io/nlp-processor-lab)) for capture and **A1** ([client SDK](https://github.com/cere-io/cere-activity-sdk/tree/main/packages/client)) for ingestion, and verify [NLP processing](https://www.notion.so/NLP-Use-Case-Wiki-A8-1f9d800083d68075bdf4d1150d70ebda?pvs=21) via **Cubbie / Query Tool**.
 
