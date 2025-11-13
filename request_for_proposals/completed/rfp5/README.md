@@ -1,3 +1,4 @@
+## 🚨🚨 THIS RFP IS CLOSED - no winning proposal submitted / RFP is restructured into RFP6 and 7 🚨🚨
 🚨 **Reminder: Review the Contribution Guidelines!** 🚨
 
 Before submitting your proposal, please make sure to carefully review the [Contribution Guidelines](https://github.com/Cerebellum-Network/grant-program/blob/master/README.md). ✅
