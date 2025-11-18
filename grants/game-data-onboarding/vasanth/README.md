@@ -56,7 +56,7 @@ Please also provide the GitHub accounts of all team members. If they contain no 
 | -----: | ----------- | ------------- | ---- |
 | 1 | Game Session Recording System | A simple UI that records voice through a microphone and game data using an API during live Marvel Rival game sessions. It captures audio input and transcribes it using Whisper and stores game data in json format. | https://github.com/VasPug/Marvel-Rivals-Game-Logs |
 | 2 | Testing Framework Integration | Simulate live game sessions or replay using the testing framework (A6), which is already integrated with the Client SDK (A1). | https://github.com/cere-io/nlp-processor-lab/pull/14 , https://github.com/cere-io/nlp-processor-lab/pull/13 |
-| 3 | Query Tool Integration | Leverage the existing Query Tool to extract results stored in a cubbie. Provides access to processed data for verification and testing. |
+| 3 | Query Tool Integration | Leverage the existing Query Tool to extract results stored in a cubbie. Provides access to processed data for verification and testing. | https://github.com/cere-io/GameOnBoardingQueryTool|
 | 4 | Documentation | Basic documentation covering: how to run the system, required configurations, and credentials needed. Includes setup instructions and usage examples. | https://docs.google.com/document/d/1TrxAXRH8gO-6rg_o1S-3L5qtFYpjR6rnA3EtGgBqaJw/edit?usp=sharing |
 
 
