@@ -29,17 +29,9 @@ The system will:
 
 Vasanth Pugalenthi is a Computer Science major studying at Cal Poly San Luis Obispo. He has experience with audio processing, API integration, and working with existing frameworks and SDKs.
 
-
-### Team Code Repos
-
-- 
-- 
-
-Please also provide the GitHub accounts of all team members. If they contain no activity, references to projects hosted elsewhere or live are also fine.
+Please also provide the GitHub accounts of all team members. 
 
 - VasPug
-
-## Development Roadmap:
 
 
 ### Overview
