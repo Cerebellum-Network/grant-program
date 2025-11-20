@@ -56,7 +56,7 @@ Please also provide the GitHub accounts of all team members. If they contain no 
 | -----: | ----------- | ------------- | ---- |
 | 1 | Game Session Recording System | A simple UI that records voice through a microphone and game data using an API during live Marvel Rival game sessions. It captures audio input and transcribes it using Whisper and stores game data in json format. | https://github.com/VasPug/Marvel-Rivals-Game-Logs |
 | 2 | Game Data Testing Framework Integration | Simulate live game sessions or replay using the testing framework (A6), which is already integrated with the Client SDK (A1). | https://github.com/cere-io/nlp-processor-lab/pull/13   |
-| 3 | Audio Data Testing Framework Integration | Simulate live voice chat audio sessions or replay using the testing framework (A6) | https://github.com/cere-io/nlp-processor-lab/pull/14 | 
+| 3 | Audio Data Testing Framework Integration | Simulate live voice chat audio sessions or replay using the testing framework (A6) | https://github.com/cere-io/nlp-processor-lab/blob/master/src/pipelines/pipeline4 | 
 | 4 | Query Tool Integration | Leverage the existing Query Tool to extract results stored in a cubbie. Provides access to processed data for verification and testing. | https://github.com/cere-io/GameAndAudioDataQueryTool |
 
 
@@ -66,7 +66,7 @@ Please also provide the GitHub accounts of all team members. If they contain no 
 | ----------: | ------ |
 | 1 | [Marvel Rivals Game Session Recording](https://github.com/VasPug/Marvel-Rivals-Game-Logs#readme) |
 | 2 | [Game Data NLP Processor Lab](https://github.com/cere-io/nlp-processor-lab/tree/adding-agents-and-rafts#readme) |
-| 3 | [Audio Data NLP Processor Lab](https://github.com/VasPug/nlp-processor-lab/blob/2adfdd7a625854243f9a9f8e5481759f73d4ea90/src/pipelines/pipeline4/README.md) |
+| 3 | [Audio Data NLP Processor Lab](https://github.com/cere-io/nlp-processor-lab/blob/master/src/pipelines/pipeline4/README.md) |
 | 4 | [Query Tool / NLPDevdemo](https://github.com/cere-io/GameAndAudioDataQueryTool#readme) |
 
 
